@@ -15,9 +15,10 @@ import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
-import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.os.bundleOf
@@ -28,8 +29,8 @@ import com.google.accompanist.swiperefresh.SwipeRefresh
 import com.google.accompanist.swiperefresh.rememberSwipeRefreshState
 import com.jermaine.newskmm.android.R
 import com.jermaine.newskmm.android.ui.common.KmmTopAppBar
+import com.jermaine.newskmm.android.ui.features.ArticlePreviewProvider
 import com.jermaine.newskmm.android.ui.features.model.ArticleViewRep
-import com.jermaine.newskmm.android.ui.features.model.SourceViewRep
 import com.jermaine.newskmm.android.ui.utils.ARGS_ARTICLE
 import com.jermaine.newskmm.android.ui.utils.NAV_DETAILS
 
@@ -90,7 +91,7 @@ fun ArticleList(
 @Preview(showBackground = true)
 @Composable
 fun ArticleItem(
-    @PreviewParameter(ArticleProvider::class) article: ArticleViewRep,
+    @PreviewParameter(ArticlePreviewProvider::class) article: ArticleViewRep,
     onItemClick: (ArticleViewRep) -> Unit = {}
 ) {
     Card(
@@ -117,7 +118,8 @@ fun ArticleItem(
                 fontSize = 17.sp,
                 modifier = Modifier
                     .padding(vertical = 8.dp, horizontal = 8.dp),
-                maxLines = 3
+                maxLines = 3,
+                fontWeight = FontWeight.Bold
             )
             Text(
                 text = article.description,
@@ -129,23 +131,3 @@ fun ArticleItem(
         }
     }
 }
-
-class ArticleProvider : PreviewParameterProvider<ArticleViewRep> {
-    override val values: Sequence<ArticleViewRep> = fakeArticles.asSequence()
-}
-
-private val fakeArticles = listOf(
-    ArticleViewRep(
-        source = SourceViewRep(
-            id = "123",
-            name = "techcrunch"
-        ),
-        author = "Jermaine Dilao",
-        title = "Sample Title",
-        description = "Two US senators are calling on the Federal Trade Commission to investigate Tesla over the company's claims that its vehicles are self-driving, after a number of deadly crashes involving Tesla models using the autopilot function. Read Full Article at RT.com",
-        urlToImage = "https://cdni.rt.com/files/2021.08/article/611e2c542030272c5f53ce51.JPG",
-        url = "https://www.rt.com/business/532473-tesla-deceptive-autopilot-claims/",
-        publishedAt = "2021-08-19T10:00:49Z",
-        content = "Christy Ai and Ben Swann discuss the cult of personality phenomenon of Elon Musk and how it may be the reason why the company has gotten away with making deceptive claims for so long. For more stori… [+54 chars]"
-    )
-)
