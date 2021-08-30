@@ -1,4 +1,4 @@
-package com.jermaine.newskmm.ui.theme
+package com.jermaine.newskmm.android.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme

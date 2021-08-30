@@ -20,7 +20,7 @@ import com.jermaine.newskmm.android.ui.features.model.ArticleViewRep
 import com.jermaine.newskmm.android.ui.utils.ARGS_ARTICLE
 import com.jermaine.newskmm.android.ui.utils.NAV_DETAILS
 import com.jermaine.newskmm.android.ui.utils.NAV_HOME
-import com.jermaine.newskmm.ui.theme.AppTheme
+import com.jermaine.newskmm.android.ui.theme.AppTheme
 
 @ExperimentalAnimationApi
 class MainActivity : AppCompatActivity() {

@@ -15,7 +15,6 @@ import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
@@ -76,7 +75,7 @@ fun ArticleList(
                     .fillMaxSize(),
                 contentPadding = PaddingValues(
                     horizontal = 16.dp,
-                    vertical = 8.dp
+                    vertical = 16.dp
                 ),
                 verticalArrangement = Arrangement.spacedBy(16.dp)
             ) {

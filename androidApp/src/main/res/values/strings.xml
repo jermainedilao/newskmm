@@ -2,4 +2,7 @@
 <resources>
     <string name="app_name">NewsKMM</string>
     <string name="details">Details</string>
+    <string name="author_format">author: %1$s</string>
+    <string name="source_format">source: %1$s</string>
+    <string name="published_at_format">published at: %1$s</string>
 </resources>

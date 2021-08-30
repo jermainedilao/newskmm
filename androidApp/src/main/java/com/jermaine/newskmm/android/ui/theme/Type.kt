@@ -1,4 +1,4 @@
-package com.jermaine.newskmm.ui.theme
+package com.jermaine.newskmm.android.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
