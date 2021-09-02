@@ -4,31 +4,28 @@ plugins {
     kotlin("android")
 }
 
-val composeVersion = "1.1.0-alpha02"
-
 dependencies {
     implementation(project(":shared"))
-    implementation("com.google.android.material:material:1.3.0")
-    implementation("androidx.appcompat:appcompat:1.2.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.0.4")
-    implementation("androidx.annotation:annotation:1.1.0")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.5.20-RC")
-    implementation("androidx.core:core-ktx:1.3.2")
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.2.0")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0")
+    implementation(Google.material)
+    implementation(Kotlin.stdlib)
+    implementation(AndroidX.appCompat)
+    implementation(AndroidX.constraintLayout)
+    implementation(AndroidX.annotation)
+    implementation(AndroidX.coreKtx)
+    implementation(AndroidX.liveDataKtx)
+    implementation(AndroidX.viewModelKtx)
 
     // Compose
-    implementation("androidx.compose.ui:ui:$composeVersion")
-    implementation("androidx.compose.material:material:$composeVersion")
-    implementation("androidx.compose.ui:ui-tooling:$composeVersion")
-    implementation("androidx.activity:activity-compose:1.3.0-beta02")
-    implementation("androidx.navigation:navigation-compose:2.4.0-alpha05")
-    implementation("com.google.accompanist:accompanist-navigation-animation:0.17.0")
-    implementation("androidx.compose.runtime:runtime:$composeVersion")
-    implementation("androidx.compose.runtime:runtime-livedata:$composeVersion")
-    implementation("io.coil-kt:coil-compose:1.3.2")
-
-    implementation("com.google.accompanist:accompanist-swiperefresh:0.17.0")
+    implementation(Compose.ui)
+    implementation(Compose.material)
+    implementation(Compose.uiTooling)
+    implementation(Compose.activity)
+    implementation(Compose.navigation)
+    implementation(Compose.navigationAnimation)
+    implementation(Compose.runtime)
+    implementation(Compose.runtimeLiveData)
+    implementation(Compose.coil)
+    implementation(Compose.swipeRefresh)
 }
 
 android {
@@ -49,7 +46,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = composeVersion
-        kotlinCompilerVersion = "1.5.10"
+        kotlinCompilerExtensionVersion = Compose.version
+        kotlinCompilerVersion = Kotlin.version
     }
 }

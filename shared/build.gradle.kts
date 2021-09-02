@@ -34,14 +34,10 @@ kotlin {
 
         val commonMain by getting {
             dependencies {
-                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0-native-mt")
-                implementation("io.ktor:ktor-client-core:$ktorVersion")
-                implementation("io.ktor:ktor-client-serialization:$ktorVersion")
-
-//                implementation("io.ktor:ktor-client-auth:$ktorVersion")
-//                implementation("io.ktor:ktor-client-logging:$ktorVersion")
-//                implementation("io.ktor:ktor-client-cio:$ktorVersion")
-                implementation("ch.qos.logback:logback-classic:1.2.5")
+                implementation(Kotlin.coroutinesCoreNative)
+                implementation(Ktor.clientCore)
+                implementation(Ktor.clientSerialization)
+                implementation(Ktor.logbackClassic)
             }
         }
         val commonTest by getting {
@@ -52,11 +48,11 @@ kotlin {
         }
         val androidMain by getting {
             dependencies {
-                implementation("io.ktor:ktor-client-android:$ktorVersion")
-                implementation("io.ktor:ktor-client-cio-jvm:$ktorVersion")
-                implementation("io.ktor:ktor-client-auth-jvm:$ktorVersion")
-                implementation("io.ktor:ktor-client-logging-jvm:$ktorVersion")
-                implementation("io.ktor:ktor-client-serialization-jvm:$ktorVersion")
+                implementation(Ktor.clientAndroid)
+                implementation(Ktor.clientCioJvm)
+                implementation(Ktor.clientAuthJvm)
+                implementation(Ktor.clientLoggingJvm)
+                implementation(Ktor.clientSerializationJvm)
             }
         }
         val androidTest by getting {
@@ -67,10 +63,7 @@ kotlin {
         }
         val iosMain by getting {
             dependencies {
-                implementation("io.ktor:ktor-client-ios:$ktorVersion")
-//                implementation("io.ktor:ktor-client-auth-ios:$ktorVersion")
-//                implementation("io.ktor:ktor-client-logging-ios:$ktorVersion")
-//                implementation("io.ktor:ktor-client-serialization-ios:$ktorVersion")
+                implementation(Ktor.clientIos)
             }
         }
     }
