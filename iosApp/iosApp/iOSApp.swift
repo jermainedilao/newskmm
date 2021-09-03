@@ -5,7 +5,7 @@ import shared
 struct iOSApp: App {
 	var body: some Scene {
 		WindowGroup {
-			ContentView(
+			Home(
                 viewModel: .init(
                     articlesRepository: ArticleRepository()
                 )

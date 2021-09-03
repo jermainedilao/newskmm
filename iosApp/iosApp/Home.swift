@@ -2,10 +2,10 @@ import SwiftUI
 import shared
 import Combine
 
-struct ContentView: View {
+struct Home: View {
     let greet = Greeting().greeting()
     
-    @ObservedObject var viewModel: ContentView.ViewModel
+    @ObservedObject var viewModel: Home.ViewModel
     
 	var body: some View {
         ArticleList(
@@ -14,7 +14,7 @@ struct ContentView: View {
 	}
 }
 
-extension ContentView {
+extension Home {
     class ViewModel : ObservableObject {
         
         @Published var articles = [Article]()
@@ -43,8 +43,18 @@ struct ArticleList : View {
     var articles = [Article]()
     
     var body: some View {
-        List(articles, id: \.title) { article in
-            ArticleRow(article: article)
+        NavigationView {
+            List(articles, id: \.title) { article in
+                // https://stackoverflow.com/a/59832389/5285687
+                ZStack {
+                    ArticleRow(article: article)
+                    NavigationLink(destination: Details()) {
+                        EmptyView()
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                }
+            }
+            .navigationTitle("NewsKMM")
         }
     }
 }
