@@ -6,6 +6,10 @@ plugins {
 
 dependencies {
     implementation(project(":shared"))
+    implementation(project(":article:article_list"))
+    implementation(project(":article:article_details"))
+    implementation(project(":components"))
+
     implementation(Google.material)
     implementation(Kotlin.stdlib)
     implementation(AndroidX.appCompat)
@@ -48,5 +52,13 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = Compose.version
         kotlinCompilerVersion = Kotlin.version
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_11.name
+    }
+    tasks {
+        withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+            kotlinOptions { jvmTarget = "11" }
+        }
     }
 }

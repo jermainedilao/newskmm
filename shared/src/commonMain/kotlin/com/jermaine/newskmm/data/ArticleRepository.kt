@@ -9,7 +9,6 @@ class ArticleRepository() {
         ArticleRemoteSource()
     }
 
-
     fun getArticles(callback: (Result<List<Article>>) -> Unit) {
         articleRemoteSource.getArticles(callback)
     }

@@ -4,9 +4,8 @@ import io.ktor.client.*
 import io.ktor.client.engine.ios.*
 import io.ktor.client.features.json.*
 import io.ktor.client.features.json.serializer.*
-//import io.ktor.client.features.logging.*
+// import io.ktor.client.features.logging.*
 import io.ktor.client.features.observer.*
-
 
 internal actual object Api {
     actual val httpClient by lazy {
@@ -21,11 +20,13 @@ internal actual object Api {
 //                level = LogLevel.BODY
 //            }
             install(JsonFeature) {
-                serializer = KotlinxSerializer(kotlinx.serialization.json.Json {
-                    isLenient = true
-                    ignoreUnknownKeys = true
-                    useDefaultTransformers = true
-                })
+                serializer = KotlinxSerializer(
+                    kotlinx.serialization.json.Json {
+                        isLenient = true
+                        ignoreUnknownKeys = true
+                        useDefaultTransformers = true
+                    }
+                )
             }
         }
     }
