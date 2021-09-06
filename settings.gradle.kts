@@ -10,7 +10,6 @@ rootProject.name = "NewsKMM"
 include(":androidApp")
 include(":article-shared")
 include(":article:article_list")
-include(":components")
+include(":android-core")
 include(":article:common-ui")
 include(":article:article_details")
-include(":android-core")

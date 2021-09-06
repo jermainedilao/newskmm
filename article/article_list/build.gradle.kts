@@ -6,7 +6,6 @@ plugins {
 
 dependencies {
     implementation(project(":article-shared"))
-    implementation(project(":components"))
     implementation(project(":android-core"))
     api(project(":article:common-ui"))
 

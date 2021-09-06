@@ -8,7 +8,7 @@ dependencies {
     implementation(project(":article-shared"))
     implementation(project(":article:article_list"))
     implementation(project(":article:article_details"))
-    implementation(project(":components"))
+    implementation(project(":android-core"))
 
     implementation(Google.material)
     implementation(Kotlin.stdlib)
