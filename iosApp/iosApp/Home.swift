@@ -1,5 +1,5 @@
 import SwiftUI
-import shared
+import shared_articles
 import Combine
 
 struct Home: View {

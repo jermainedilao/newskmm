@@ -5,7 +5,7 @@ plugins {
 }
 
 dependencies {
-    implementation(project(":shared"))
+    implementation(project(":shared-articles"))
     implementation(project(":article:article_list"))
     implementation(project(":article:article_details"))
     implementation(project(":components"))

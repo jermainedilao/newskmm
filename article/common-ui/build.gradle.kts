@@ -5,7 +5,7 @@ plugins {
 }
 
 dependencies {
-    implementation(project(":shared"))
+    implementation(project(":shared-articles"))
 
     // Compose
     implementation(Compose.ui)

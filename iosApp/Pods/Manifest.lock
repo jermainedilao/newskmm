@@ -1,16 +1,16 @@
 PODS:
-  - shared (1.0)
+  - shared_articles (1.0)
 
 DEPENDENCIES:
-  - shared (from `../shared`)
+  - shared_articles (from `../shared-articles`)
 
 EXTERNAL SOURCES:
-  shared:
-    :path: "../shared"
+  shared_articles:
+    :path: "../shared-articles"
 
 SPEC CHECKSUMS:
-  shared: 29346581d099b8843a69aab157c4d0577c3c8287
+  shared_articles: cf02fafcd85db8c6053db454f2aeaf74408488cc
 
-PODFILE CHECKSUM: f282da88f39e69507b0a255187c8a6b644477756
+PODFILE CHECKSUM: e17c5d2c4903235740d3f10023d60b2315ba6f69
 
 COCOAPODS: 1.10.1

@@ -5,8 +5,9 @@ plugins {
 }
 
 dependencies {
-    implementation(project(":shared"))
+    implementation(project(":shared-articles"))
     implementation(project(":components"))
+    implementation(project(":android-core"))
     api(project(":article:common-ui"))
 
     implementation(Google.material)
