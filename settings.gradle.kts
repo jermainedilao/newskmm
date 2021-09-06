@@ -8,7 +8,7 @@ pluginManagement {
 
 rootProject.name = "NewsKMM"
 include(":androidApp")
-include(":shared-articles")
+include(":article-shared")
 include(":article:article_list")
 include(":components")
 include(":article:common-ui")
